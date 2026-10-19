@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Minh họa món ăn Vị Việt</title>
+  <desc id="desc">Một chiếc bát xanh với làn hơi ấm trên nền màu kem.</desc>
+  <rect width="800" height="520" fill="#F3EBDD"/>
+  <circle cx="400" cy="260" r="190" fill="#E8EFE7"/>
+  <path d="M255 294h290c-12 93-65 143-145 143s-133-50-145-143Z" fill="#245C45"/>
+  <path d="M226 281h348" fill="none" stroke="#D96C4F" stroke-linecap="round" stroke-width="18"/>
+  <path d="M335 222c-23-29 23-41 0-70M400 218c-23-29 23-41 0-70M465 222c-23-29 23-41 0-70" fill="none" stroke="#D96C4F" stroke-linecap="round" stroke-width="12"/>
+  <path d="M356 347c23 21 55 33 93 35" fill="none" stroke="#FFF9F1" stroke-linecap="round" stroke-width="9" opacity=".9"/>
+  <circle cx="300" cy="242" r="8" fill="#E9B64E"/><circle cx="500" cy="244" r="8" fill="#E9B64E"/>
+</svg>

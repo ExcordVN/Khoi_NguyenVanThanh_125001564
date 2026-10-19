@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Minh họa địa điểm ăn uống</title>
+  <desc id="desc">Một mái hiên cửa tiệm và dấu vị trí trên nền xanh nhạt.</desc>
+  <rect width="800" height="520" fill="#E8EFE7"/>
+  <circle cx="400" cy="260" r="185" fill="#F4EAD9"/>
+  <path d="M268 227h264v176H268z" rx="12" fill="#FFF9F1" stroke="#245C45" stroke-width="12"/>
+  <path d="M245 227 278 155h244l33 72Z" fill="#D96C4F"/>
+  <path d="M245 227h310c-3 34-29 50-61 50s-54-16-57-50c-4 34-27 50-59 50s-55-16-58-50c-4 34-28 50-59 50s-52-16-56-50Z" fill="#245C45"/>
+  <path d="M305 304h64v99h-64zM409 298h83v65h-83z" fill="#E9B64E"/>
+  <path d="M450 182c-31 0-56 24-56 55 0 43 56 99 56 99s56-56 56-99c0-31-25-55-56-55Z" fill="#FFF9F1" stroke="#D96C4F" stroke-width="10"/>
+  <circle cx="450" cy="237" r="17" fill="#245C45"/>
+</svg>

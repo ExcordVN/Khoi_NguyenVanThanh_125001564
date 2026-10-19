@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#fff9f1" />
+		<meta name="description" content="Khám phá món ngon Việt Nam và tìm quán ăn quanh bạn cùng Vị Việt." />
+		<meta http-equiv="refresh" content="0; url=index.html" />
+		<title>Vị Việt — Hương vị gần nhà</title>
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+		<link rel="canonical" href="index.html" />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="nav container" aria-label="Điều hướng chính">
+				<a class="brand" href="#home" aria-label="Vị Việt, về đầu trang"><img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true" /><span>Vị Việt</span></a>
+				<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Mở menu"><span></span><span></span></button>
+				<div class="nav-links" id="nav-links">
+					<a href="#home">Trang chủ</a>
+					<a href="#food-discovery">Khám phá món ngon</a>
+					<a href="#nearby-restaurants">Quán ăn gần bạn</a>
+					<a href="#about">Giới thiệu</a>
+					<a class="button button-small button-green nav-cta" href="#food-discovery">Khám phá ngay <span aria-hidden="true">↗</span></a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero" id="home">
+				<div class="hero-inner container">
+					<div class="hero-copy animate__animated animate__fadeInUp">
+						<p class="eyebrow"><span class="eyebrow-line"></span> Một vòng Việt Nam, qua từng món ngon</p>
+						<h1>Khám phá hương vị Việt, <em>tìm quán ngon</em> quanh bạn.</h1>
+						<p class="hero-description">Từ món ăn đường phố dân dã đến đặc sản vùng miền, tìm cảm hứng cho bữa ăn tiếp theo của bạn.</p>
+						<div class="hero-actions">
+							<a class="button button-green" href="#food-discovery">Khám phá món ngon <span aria-hidden="true">↗</span></a>
+							<a class="button button-outline" href="#nearby-restaurants"><span class="pin-icon" aria-hidden="true">⌖</span> Tìm quán gần tôi</a>
+						</div>
+						<div class="hero-footnote"><span class="tiny-sun" aria-hidden="true">✳</span> Hương vị thân quen, câu chuyện mới mỗi ngày</div>
+					</div>
+					<div class="hero-visual animate__animated animate__fadeIn animate__delay-1s" aria-label="Mâm phở Việt nóng hổi">
+						<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=85" data-fallback="assets/images/food-placeholder.svg" alt="Tô mì nóng hổi với rau thơm và nước dùng" fetchpriority="high" />
+						<div class="image-note"><span class="note-dot"></span><span><strong>Mỗi vùng một vị</strong><small>Đi tìm điều ngon quanh ta</small></span></div>
+						<span class="image-stamp" aria-hidden="true">Vị<br />Việt</span>
+					</div>
+				</div>
+				<div class="hero-bottom container"><span>01 / 03</span><span class="hero-rule"></span><span>Ẩm thực Việt Nam</span></div>
+			</section>
+
+			<section class="discovery section-pad" id="food-discovery">
+				<div class="container">
+					<div class="section-heading" data-aos="fade-up">
+						<div><p class="eyebrow">Bản đồ vị giác</p><h2>Ngon từ Bắc chí Nam</h2><p class="section-intro">Khám phá những món ăn làm nên bản sắc ẩm thực Việt Nam.</p></div>
+						<button class="button button-outline random-button" id="random-food" type="button"><span aria-hidden="true">✳</span> Gợi ý món ngẫu nhiên</button>
+					</div>
+					<div class="food-tools" data-aos="fade-up">
+						<label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Tìm món ăn</span><input id="food-search" type="search" placeholder="Tìm món, vùng miền..." autocomplete="off" /><kbd>/</kbd></label>
+						<div class="filter-list" role="group" aria-label="Lọc món theo vùng miền">
+							<button class="filter-chip is-active" type="button" data-region="all" aria-pressed="true">Tất cả</button>
+							<button class="filter-chip" type="button" data-region="Bắc" aria-pressed="false">Miền Bắc</button>
+							<button class="filter-chip" type="button" data-region="Trung" aria-pressed="false">Miền Trung</button>
+							<button class="filter-chip" type="button" data-region="Nam" aria-pressed="false">Miền Nam</button>
+							<button class="filter-chip" type="button" data-region="chay" aria-pressed="false">Món chay</button>
+						</div>
+					</div>
+					<p class="sr-only" id="food-status" aria-live="polite"></p>
+					<div class="food-grid" id="food-grid"></div>
+					<div class="empty-state" id="food-empty" hidden>Chưa tìm thấy món phù hợp. Thử một từ khóa khác nhé.</div>
+					<div class="random-result" id="random-result" aria-live="polite" hidden></div>
+				</div>
+			</section>
+
+			<section class="recommend section-pad" id="recommend">
+				<div class="container recommend-layout">
+					<div class="recommend-copy" data-aos="fade-up"><p class="eyebrow">Để Vị Việt chọn giúp</p><h2>Hôm nay ăn gì?</h2><p>Chọn vài khẩu vị bạn thích. Một gợi ý ngon lành sẽ xuất hiện ngay.</p></div>
+					<form class="preference-form" id="preference-form" data-aos="fade-up">
+						<label>Khẩu vị vùng miền<select name="region"><option value="all">Vùng nào cũng được</option><option value="Bắc">Miền Bắc</option><option value="Trung">Miền Trung</option><option value="Nam">Miền Nam</option></select></label>
+						<label>Bạn muốn ăn<select name="diet"><option value="all">Món nào cũng được</option><option value="chay">Món chay</option><option value="man">Món mặn</option></select></label>
+						<label>Kiểu món<select name="style"><option value="all">Không ưu tiên</option><option value="nuoc">Món nước</option><option value="kho">Món khô</option></select></label>
+						<label>Độ cay<select name="spice"><option value="all">Tùy tâm trạng</option><option value="spicy">Thích cay</option><option value="mild">Không cay</option></select></label>
+						<button class="button button-green" type="submit">Tìm món hợp vị <span aria-hidden="true">↗</span></button>
+						<p id="recommendation-result" class="recommendation-result" aria-live="polite"></p>
+					</form>
+				</div>
+			</section>
+
+			<section class="restaurants section-pad" id="nearby-restaurants">
+				<div class="container">
+					<div class="section-heading restaurant-heading" data-aos="fade-up">
+						<div><p class="eyebrow">Mở cửa, đi ăn thôi</p><h2>Quán ngon quanh bạn</h2><p class="section-intro">Tìm những địa điểm ăn uống gần đây từ dữ liệu OpenStreetMap.</p></div>
+						<button class="button button-green" id="locate-button" type="button"><span class="pin-icon" aria-hidden="true">⌖</span> Tìm quán gần tôi</button>
+					</div>
+					<div class="location-explainer"><span class="info-icon" aria-hidden="true">i</span><p>Chỉ khi bạn nhấn nút, trình duyệt mới hỏi quyền truy cập vị trí. Tọa độ chỉ dùng cho lần tìm này, không được lưu. Vị trí thường yêu cầu HTTPS hoặc localhost.</p></div>
+					<div class="city-picker"><label for="city-select">Hoặc chọn thành phố</label><select id="city-select"><option value="">Chọn thành phố để tìm quanh đó</option><option value="hanoi">Hà Nội</option><option value="hcm">TP. Hồ Chí Minh</option><option value="danang">Đà Nẵng</option></select><button class="button button-outline" id="city-search" type="button">Tìm quanh thành phố</button></div>
+					<p class="restaurant-status" id="restaurant-status" role="status" aria-live="polite">Quán ăn hiển thị từ OpenStreetMap. Dữ liệu có thể chưa đầy đủ.</p>
+					<div class="restaurant-empty" id="restaurant-empty" hidden><img src="assets/images/restaurant-placeholder.svg" alt="" aria-hidden="true" /><p>Chưa có địa điểm phù hợp trong lần tìm này.</p></div>
+					<div class="restaurant-grid" id="restaurant-grid"></div>
+				</div>
+			</section>
+
+			<section class="about section-pad" id="about">
+				<div class="container about-inner" data-aos="fade-up">
+					<div class="about-mark" aria-hidden="true">V<span>✳</span></div>
+					<div><p class="eyebrow">Câu chuyện của Vị Việt</p><h2>Ngon lành từ những điều gần gũi.</h2><p>Vị Việt giúp bạn khám phá món ăn ba miền, hiểu thêm chuyện bếp núc vùng miền và tìm quán ăn quanh mình. Một lời gợi ý nhỏ cho những bữa ăn thật vui.</p></div>
+					<a class="text-link" href="#food-discovery">Đi một vòng Việt Nam <span aria-hidden="true">↗</span></a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-main">
+				<div class="footer-brand"><a class="brand brand-light" href="#home"><img class="brand-logo" src="assets/logo.svg" alt="" aria-hidden="true" /><span>Vị Việt</span></a><p>Mỗi món ngon là một câu chuyện quê nhà.</p></div>
+				<div class="footer-links"><h2>Khám phá</h2><a href="#food-discovery">Món ngon ba miền</a><a href="#nearby-restaurants">Quán ăn gần bạn</a><a href="#about">Về Vị Việt</a></div>
+				<div class="footer-contact"><h2>Liên hệ</h2><p>Email: <a href="mailto:hello@example.com">hello@example.com</a> <span>(thông tin mẫu)</span></p><p>Địa chỉ: đang cập nhật <span>(thông tin mẫu)</span></p></div>
+			</div>
+			<div class="container footer-bottom"><span>© <span id="current-year"></span> Vị Việt</span><span>Vị ngon Việt Nam, dành cho mọi nhà.</span></div>
+		</footer>
+	</body>
+</html>
+
+
